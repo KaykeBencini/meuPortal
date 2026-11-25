@@ -1,0 +1,171 @@
+/* Estilo da tela de login baseado em prototipos/tela-login-modelo.png */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow-x: hidden;
+
+    /* Fotografias laterais */
+    background-image:
+        url("./imgs/criancas.png"),
+        url("./imgs/menina.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: 33.1% 100%, 40.3% 100%;
+
+    color: #454545;
+    font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;
+}
+
+/* Painel translúcido central */
+main.login {
+    width: 26.6%;
+    max-width: 510px;
+    min-width: 390px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 38px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.86);
+}
+
+/* Títulos e logotipo */
+h1 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: block;
+    width: 72%;
+    max-width: 330px;
+    height: auto;
+    margin: 0 0 36px;
+}
+
+h2 {
+    width: 100%;
+    margin: 0 0 38px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Campos do formulário */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    margin: 0 0 40px;
+
+    color: #777;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #ccc;
+    border-radius: 0;
+
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #999;
+}
+
+/* Botão */
+button {
+    min-width: 105px;
+    padding: 13px 22px;
+    margin: 0 0 26px;
+
+    color: #fff;
+    background: #df3929;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #c92f21;
+}
+
+/* Links abaixo do botão */
+.links {
+    margin: 0 0 10px;
+    font-size: 15px;
+}
+
+a {
+    color: #df3929;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 900px) {
+    body {
+        background-size: 50% 100%, 50% 100%;
+    }
+
+    main.login {
+        width: min(90%, 510px);
+        min-width: 0;
+        padding: 32px 28px;
+        background: rgba(255, 255, 255, 0.91);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    main.login {
+        width: 100%;
+        padding: 28px 24px;
+    }
+
+    .logo {
+        width: 80%;
+    }
+}
